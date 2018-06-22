@@ -2,3 +2,8 @@ c:\users\danma\source\repos\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.
 c:\users\danma\source\repos\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
 C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
 C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\bin\Debug\RPSLS.exe.config
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\bin\Debug\RPSLS.exe
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\bin\Debug\RPSLS.pdb
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.exe
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.pdb
