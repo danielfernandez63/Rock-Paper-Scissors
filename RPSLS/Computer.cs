@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Computer : Players
+    class Computer : Player
     {
 
         public Computer(string name)
@@ -16,6 +16,7 @@ namespace RPSLS
             this.name = name;
 
         }
+                //this will create a random roll for one of my six variables aka pc picks
 
         public override void ChooseGesture()
 
@@ -23,7 +24,7 @@ namespace RPSLS
 
             Random rnd = new Random();
 
-            choice = rnd.Next(0, 5);
+            choice = rnd.Next(0, 4);
 
         }
 

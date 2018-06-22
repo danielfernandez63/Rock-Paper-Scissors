@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Human : Players
+    class Human : Player
     {
+        //humana selection keeps selection
         public Human(string name)
 
         {

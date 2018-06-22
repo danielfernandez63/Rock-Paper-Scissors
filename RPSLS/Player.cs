@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class Players
+    public class Player
     {
         public string answer;
         public int choice;
         public string name;
+        public int score;
 
          //inheriting who 
         //make a method for human rolling?

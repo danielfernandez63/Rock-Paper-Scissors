@@ -12,7 +12,9 @@ namespace RPSLS
         {
 
             Game game = new Game();
-            game.StartDirections();
+            game.RunGame();
+
+        
 
             //string response;
         }
