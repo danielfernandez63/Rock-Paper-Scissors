@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class PVE
+    class Human : Players
     {
-       
+
     }
 }

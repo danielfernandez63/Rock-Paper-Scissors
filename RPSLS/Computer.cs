@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class PVP
+    class Computer : Players
     {
+
     }
 }

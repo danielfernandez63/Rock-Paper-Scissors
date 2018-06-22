@@ -1,2 +1,4 @@
 c:\users\danma\source\repos\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
 c:\users\danma\source\repos\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.csprojAssemblyReference.cache
+C:\Users\Danma\Desktop\School\C# VS\RPSLS\RPSLS\obj\Debug\RPSLS.csproj.CoreCompileInputs.cache
