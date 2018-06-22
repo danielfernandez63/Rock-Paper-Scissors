@@ -33,14 +33,14 @@ namespace RPSLS
 
           if (response == "pvp")
           {
-          player1 = new Human();
-          player2 = new Human();
+          player1 = new Human("Player 1");
+          player2 = new Human("Players 2");
           }
 
           else if (response == "pve")
           {
-          player1 = new Human();
-          player2 = new Computer();
+          player1 = new Human("Player 1");
+          player2 = new Computer("Computer");
           }
 
           else
