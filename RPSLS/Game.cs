@@ -13,16 +13,10 @@ namespace RPSLS
        Player player2;
        public string response;
        public int wins;
-
        public List<string> gestureOptions;
-
-       public string[,] gestureOutcomes;
-
+        public string[,] gestureOutcomes;
        public List<int> calculationOptions;
 
-
-
-        //member constructor
 
         public Game()
 
@@ -47,7 +41,6 @@ namespace RPSLS
             {
 
                 PlayGame();
-                CompareGestures();
 
             }
 
@@ -63,7 +56,7 @@ namespace RPSLS
              Console.WriteLine("");
              Console.WriteLine("Directions for how to win: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock.");
              Console.WriteLine("");
-             Console.WriteLine("Hit enter when ready.");
+             Console.WriteLine("You will always be Player 1. Hit enter when ready.");
              Console.ReadLine();
              Console.WriteLine("");
             
@@ -102,7 +95,7 @@ namespace RPSLS
             player2.ChooseGesture();
             if (player1.choice == player2.choice)
             {
-                Console.WriteLine("Both players have picked  " + player1.choice + "!  It's a tie, try again!");
+                Console.WriteLine("Both players have picked  " + player1.choice + "!  It's a tie, try again! Hit enter when ready.");
                 Console.ReadLine();
                 PlayGame();
             }
@@ -120,7 +113,8 @@ namespace RPSLS
 
             {
 
-                Console.WriteLine("Player one wins!  "+ gestureOptions[player1.choice]+" "+ gestureOutcomes[player1.choice,player2.choice]+" "+gestureOptions[player2.choice]+"!");
+                Console.WriteLine("");
+                Console.WriteLine("Player one wins this round!  "+ gestureOptions[player1.choice]+" "+ gestureOutcomes[player1.choice,player2.choice]+" "+gestureOptions[player2.choice]+"!");
 
                 player1.wins += 1;
 
@@ -130,7 +124,8 @@ namespace RPSLS
 
             {
 
-                Console.WriteLine("Player two wins!  " + gestureOptions[player2.choice] + " " + gestureOutcomes[player2.choice, player1.choice] + " " + gestureOptions[player1.choice]+"!");
+                Console.WriteLine("");
+                Console.WriteLine("Player two wins this round!  " + gestureOptions[player2.choice] + " " + gestureOutcomes[player2.choice, player1.choice] + " " + gestureOptions[player1.choice]+"!");
 
                 player2.wins += 1;
 
@@ -144,16 +139,16 @@ namespace RPSLS
         {
             if (player1.wins == 2)
             {
-
-                Console.WriteLine("Player One is the winner!");
-
+                Console.WriteLine("");
+                Console.WriteLine("Player one has won best two out of three, Player one is the winner!");
+                Console.ReadLine();
             }
     
             else
             {
-
-                Console.WriteLine("Player Two is the winner!");
-
+                Console.WriteLine("");
+                Console.WriteLine("Player two has won best two out of three, Player two is the winner!");
+                Console.ReadLine();
             }
 
         }
