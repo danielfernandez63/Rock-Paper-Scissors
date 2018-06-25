@@ -17,7 +17,7 @@ namespace RPSLS
         public virtual void  ChooseGesture()   
        {
         Console.WriteLine("");
-        Console.WriteLine("Please select your choice, select one of these: 'rock' 'paper' 'scissor' 'spock' 'lizard'." );
+        Console.WriteLine("Please select your choice. Select one of the following gestures: 'rock' 'paper' 'scissor' 'spock' 'lizard'." );
         answer = Console.ReadLine().ToLower().Trim();
 
             if (answer == "rock")
@@ -42,7 +42,7 @@ namespace RPSLS
             }
             else 
             {
-                Console.WriteLine("Not a valid response. Please follow directions");
+                Console.WriteLine("Not a valid response. Please follow directions. Hit enter when ready");
                 Console.ReadLine();
                 ChooseGesture();
             }

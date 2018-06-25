@@ -64,27 +64,27 @@ namespace RPSLS
     
         public void SetUpGame()
         {
-         Console.WriteLine("Welcome to RPSLS! Do you want to play with someone or the computer. Type 'PVP' for person and 'PVE' for computer");
-         response = Console.ReadLine().ToLower().Trim();
+           Console.WriteLine("Welcome to RPSLS! Do you want to play with someone or the computer. Type 'PVP' for person and 'PVE' for computer");
+           response = Console.ReadLine().ToLower().Trim();
 
           if (response == "pvp")
           {
-          player1 = new Human("Player 1");
-          player2 = new Human("Players 2");
+              player1 = new Human("Player 1");
+              player2 = new Human("Players 2");
           }
 
           else if (response == "pve")
           {
-          player1 = new Human("Player 1");
-          player2 = new Computer("Computer");
+              player1 = new Human("Player 1");
+              player2 = new Computer("Computer");
           }
 
           else
           {
-          Console.WriteLine("Not a valid response. Please follow directions");
-          Console.ReadLine();
-          Console.ReadLine();
-          SetUpGame();
+              Console.WriteLine("Not a valid response. Please follow directions");
+              Console.ReadLine();
+              Console.ReadLine();
+              SetUpGame();
           }
             
         }
@@ -95,7 +95,8 @@ namespace RPSLS
             player2.ChooseGesture();
             if (player1.choice == player2.choice)
             {
-                Console.WriteLine("Both players have picked  " + player1.choice + "!  It's a tie, try again! Hit enter when ready.");
+                Console.WriteLine("");
+                Console.WriteLine("Both players have picked  " + player1.answer + "!  It's a tie, try again! Hit enter when ready.");
                 Console.ReadLine();
                 PlayGame();
             }
@@ -104,6 +105,7 @@ namespace RPSLS
                 CompareGestures();
             }
         }
+
 
         public void CompareGestures()
         {
@@ -128,8 +130,7 @@ namespace RPSLS
                 Console.WriteLine("Player two wins this round!  " + gestureOptions[player2.choice] + " " + gestureOutcomes[player2.choice, player1.choice] + " " + gestureOptions[player1.choice]+"!");
 
                 player2.wins += 1;
-
-
+                
             }
 
 
