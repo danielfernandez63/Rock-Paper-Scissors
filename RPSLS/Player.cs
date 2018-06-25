@@ -12,18 +12,9 @@ namespace RPSLS
         public int choice;
         public string name;
         public int score;
-
-         //inheriting who 
-        //make a method for human rolling?
+        public int wins;
         
-        //make a method for computer rolling
-        
-
-        
-
-        //playing gestures aka back and forth
-
-       public virtual void  ChooseGesture()   //need to make sure this is my abstract as this will pass on my commands but ai needs to override.
+        public virtual void  ChooseGesture()   
        {
         Console.WriteLine("Please select your choice, select one of these: 'rock' 'paper' 'scissor' 'spock' 'lizard'." );
         answer = Console.ReadLine().ToLower().Trim();
@@ -57,8 +48,6 @@ namespace RPSLS
 
 
         }
-
-
 
     }
 }

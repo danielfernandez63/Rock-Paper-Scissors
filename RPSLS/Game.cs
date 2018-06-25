@@ -12,16 +12,48 @@ namespace RPSLS
        Player player1;
        Player player2;
        public string response;
+       public int wins;
+
+       public List<string> gestureOptions;
+
+       public string[,] gestureOutcomes;
+
+       public List<int> calculationOptions;
+
+
+
+        //member constructor
+
+        public Game()
+
+        {
+
+            gestureOptions = new List<string> { "Rock", "Paper", "Scissors", "Spock", "Lizard" };
+
+            gestureOutcomes = new string[,] { { "", "", "crushes", "", "crushes" }, { "covers", "", "", "disproves", "" }, { "", "cuts", "", "", "decapitates" }, { "vaporizes", "", "disassembles", "", "" }, { "", "eats", "", "poisons", "" } };
+
+            calculationOptions = new List<int> { 4, 0, 1, 2, 3, 4, 0, 1 };
+
+        }
+
 
         public void RunGame()
         {
             StartDirections();
             SetUpGame();
-            
-            PlayGame();
 
+            for (int i = 0; (player1.wins < 2 && player2.wins < 2); i++)
 
-            
+            {
+
+                PlayGame();
+                CompareGestures();
+
+            }
+
+            FindWinner();
+            Console.ReadLine();
+
         }
 
         public void StartDirections()
@@ -58,45 +90,73 @@ namespace RPSLS
           {
           Console.WriteLine("Not a valid response. Please follow directions");
           Console.ReadLine();
+          Console.ReadLine();
           SetUpGame();
           }
-
-           
-            
-            
             
         }
-
-        //public void IncrementScore(Player player)
-        //{
-            //player.score++;
-        //}
 
         public void PlayGame()
         {
             player1.ChooseGesture();
             player2.ChooseGesture();
-            CompareGestures();
-            player1.score++;
-
-        }
-
-        private void CompareGestures()
-        {
-            if(player1.choice == 0 && player2.choice == 1)
+            if (player1.choice == player2.choice)
             {
-                player2.score++;
+                Console.WriteLine("Both players have picked  " + player1.choice + "!  It's a tie, try again!");
+                Console.ReadLine();
+                PlayGame();
+            }
+            else
+            {
+                CompareGestures();
             }
         }
-        //method to read results from the score board to obtain who is winner
+
+        public void CompareGestures()
+        {
+               
+
+            if ((player2.choice==calculationOptions[player1.choice])||(player2.choice==calculationOptions[player1.choice+3]))
+
+            {
+
+                Console.WriteLine("Player one wins!  "+ gestureOptions[player1.choice]+" "+ gestureOutcomes[player1.choice,player2.choice]+" "+gestureOptions[player2.choice]+"!");
+
+                player1.wins += 1;
+
+            }
+
+            else
+
+            {
+
+                Console.WriteLine("Player two wins!  " + gestureOptions[player2.choice] + " " + gestureOutcomes[player2.choice, player1.choice] + " " + gestureOptions[player1.choice]+"!");
+
+                player2.wins += 1;
 
 
+            }
 
 
+        }
 
+        public void FindWinner()
+        {
+            if (player1.wins == 2)
+            {
 
+                Console.WriteLine("Player One is the winner!");
 
+            }
+    
+            else
+            {
 
+                Console.WriteLine("Player Two is the winner!");
+
+            }
+
+        }
 
 
 

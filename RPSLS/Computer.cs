@@ -16,7 +16,6 @@ namespace RPSLS
             this.name = name;
 
         }
-                //this will create a random roll for one of my six variables aka pc picks
 
         public override void ChooseGesture()
 

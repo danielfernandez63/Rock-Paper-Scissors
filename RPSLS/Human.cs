@@ -8,7 +8,6 @@ namespace RPSLS
 {
     class Human : Player
     {
-        //humana selection keeps selection
         public Human(string name)
 
         {
